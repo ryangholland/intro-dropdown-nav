@@ -46,7 +46,7 @@ img {
 /* Utility */
 
 .container {
-  padding: 0 var(--spacer);
+  padding: 0 calc(var(--spacer) * 2);
   max-width: 80rem;
   margin: 0 auto;
 }
@@ -59,10 +59,39 @@ img {
 
 .split {
   display: flex;
+  gap: var(--spacer);
 }
 
 .split > * {
   flex-basis: 100%;
+}
+
+.btn {
+  display: inline-block;
+  border: solid 2px;
+  border-radius: 1rem;
+}
+
+.header-btn {
+  padding: 0.5em 1rem;
+  border-color: var(--clr-neutral-medium-gray);
+}
+
+.header-btn:hover {
+  border-color: var(--clr-neutral-almost-black);
+}
+
+.hero-btn {
+  padding: 1rem 2rem;
+  background-color: var(--clr-neutral-almost-black);
+  color: var(--clr-neutral-almost-white);
+  font-weight: var(--fw-700);
+}
+
+.hero-btn:hover,
+.hero-btn:active {
+  background-color: var(--clr-neutral-almost-white);
+  color: var(--clr-neutral-almost-black);
 }
 
 /* General */
@@ -71,6 +100,10 @@ body {
   font-family: var(--ff-primary);
   font-size: var(--fs-p);
   background-color: var(--clr-neutral-almost-white);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 98vh;
 }
 
 a {
@@ -78,6 +111,18 @@ a {
   text-decoration: none;
   font-weight: var(--fw-500);
   letter-spacing: -0.05rem;
+}
+
+a:hover {
+  color: var(--clr-neutral-almost-black);
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h1 span {
+  display: block;
 }
 
 /* Header */
@@ -89,14 +134,16 @@ header {
 .header-container {
   display: flex;
   align-items: center;
-  gap: calc(var(--spacer) * 2.5)
+  gap: calc(var(--spacer) * 2.5);
 }
 
 .nav-list,
 .header-right {
   display: flex;
   gap: var(--spacer);
-  gap: calc(var(--spacer) * 2.5)
+  gap: calc(var(--spacer) * 2.5);
+
+  align-items: center;
 }
 
 .nav-list img {
@@ -105,12 +152,53 @@ header {
   margin-bottom: 0.15rem;
 }
 
+.nav-list a {
+  display: flex;
+  align-items: center;
+}
+
 .header-right {
   margin-left: auto;
 }
 
+/* Hero */
+
+.hero-left {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  gap: calc(var(--spacer) * 3);
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: var(--spacer);
+  flex-wrap: wrap;
+  margin-top: var(--spacer);
+}
+
+.hero-img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img-container img {
+  max-height: 80vh;
+}
 
 /* Footer */
+
+footer {
+  margin-top: auto;
+}
 
 .attribution {
   font-size: 11px;
