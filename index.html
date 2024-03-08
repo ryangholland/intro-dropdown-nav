@@ -10,6 +10,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
   <body>
@@ -22,11 +23,20 @@
         <nav>
           <ul class="nav-list">
             <li>
-              <button class="link">
+              <button class="link" data-features-button>
                 Features
-                <img class="arrow" src="./images/icon-arrow-down.svg" alt="" />
+                <img
+                  class="arrow"
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  data-features-arrow
+                />
               </button>
-              <div class="dropdown features-dropdown">
+              <div
+                class="dropdown features-dropdown"
+                data-features-dropdown
+                hidden
+              >
                 <ul class="dropdown-list">
                   <li>
                     <a href="#"
@@ -55,10 +65,15 @@
               </div>
             </li>
             <li>
-              <button class="link">
-                Company <img src="./images/icon-arrow-down.svg" alt="" />
+              <button class="link" data-company-button>
+                Company
+                <img
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  data-company-arrow
+                />
               </button>
-              <div class="dropdown company-dropdown">
+              <div class="dropdown company-dropdown" data-company-dropdown hidden>
                 <ul class="dropdown-list">
                   <li><a href="#">History</a></li>
                   <li><a href="#">Our Team</a></li>
