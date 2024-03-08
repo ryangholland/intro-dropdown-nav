@@ -72,6 +72,20 @@ img {
   border-radius: 1rem;
 }
 
+.link {
+  border: none;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: var(--fs-p);
+  font-weight: var(--fw-500);
+  color: var(--clr-neutral-medium-gray);
+  cursor: pointer;
+}
+
+.link:hover {
+  color: var(--clr-neutral-almost-black);
+}
+
 .header-btn {
   padding: 0.5em 1rem;
   border-color: var(--clr-neutral-medium-gray);
@@ -248,7 +262,6 @@ footer {
 /* Mobile */
 
 @media screen and (max-width: 800px) {
-
   /* Utility */
 
   .split {
